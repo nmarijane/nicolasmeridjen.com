@@ -1,0 +1,17 @@
+services:
+  blog:
+    build: .
+    container_name: nicolasmeridjen-blog
+    restart: unless-stopped
+    networks:
+      - traefik-proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.blog-nicolasmeridjen.rule=Host(`blog.nicolasmeridjen.com`)"
+      - "traefik.http.routers.blog-nicolasmeridjen.entrypoints=websecure"
+      - "traefik.http.routers.blog-nicolasmeridjen.tls.certresolver=letsencrypt"
+      - "traefik.http.services.blog-nicolasmeridjen.loadbalancer.server.port=80"
+
+networks:
+  traefik-proxy:
+    external: true
