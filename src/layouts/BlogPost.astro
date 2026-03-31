@@ -5,28 +5,50 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import ReadingProgress from '../components/ReadingProgress.astro';
+import RelatedArticles from '../components/RelatedArticles.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import { type Lang, t } from '../i18n/translations';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'blog'>['data'] & {
+	lang: Lang;
+	postId: string;
+};
 
-const { title, description, pubDate, updatedDate, heroImage, audioFile } = Astro.props;
+const {
+	title,
+	description,
+	pubDate,
+	updatedDate,
+	heroImage,
+	audioFile,
+	tags = [],
+	catchStart,
+	catchEnd,
+	lang,
+	postId,
+} = Astro.props;
+
+const articleUrl = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 
-<html lang="fr">
+<html lang={lang}>
 	<head>
-		<BaseHead title={title} description={description} image={heroImage} />
+		<BaseHead title={title} description={description} image={heroImage} lang={lang} />
 	</head>
 
 	<body>
-		<Header />
+		<ReadingProgress />
+		<Header lang={lang} />
 		<main>
 			<article>
 				<header class="article-header">
 					<h1>{title}</h1>
 					<div class="article-meta">
-						<FormattedDate date={pubDate} />
+						<FormattedDate date={pubDate} lang={lang} />
 						{updatedDate && (
 							<span class="updated">
-								&middot; Mis à jour le <FormattedDate date={updatedDate} />
+								&middot; {t(lang, 'article.updated')} <FormattedDate date={updatedDate} lang={lang} />
 							</span>
 						)}
 					</div>
@@ -41,11 +63,17 @@ const { title, description, pubDate, updatedDate, heroImage, audioFile } = Astro
 								<circle cx="6" cy="18" r="3"/>
 								<circle cx="18" cy="16" r="3"/>
 							</svg>
-							<span>Ecouter cet article</span>
+							<span>{t(lang, 'audio.listen')}</span>
 						</div>
 						<audio controls preload="metadata">
 							<source src={audioFile} type="audio/mpeg" />
 						</audio>
+					</div>
+				)}
+
+				{catchStart && (
+					<div class="catch-phrase">
+						{catchStart}
 					</div>
 				)}
 
@@ -58,9 +86,18 @@ const { title, description, pubDate, updatedDate, heroImage, audioFile } = Astro
 				<div class="prose">
 					<slot />
 				</div>
+
+				{catchEnd && (
+					<div class="catch-phrase">
+						{catchEnd}
+					</div>
+				)}
 			</article>
+
+			<ShareButtons url={articleUrl} title={title} lang={lang} />
+			<RelatedArticles currentId={postId} currentTags={tags} lang={lang} />
 		</main>
-		<Footer />
+		<Footer lang={lang} />
 	</body>
 </html>
 
@@ -112,6 +149,16 @@ const { title, description, pubDate, updatedDate, heroImage, audioFile } = Astro
 	.audio-player audio {
 		width: 100%;
 		height: 40px;
+	}
+	.catch-phrase {
+		border-left: 3px solid var(--color-accent);
+		padding: 1rem 1.25rem;
+		margin: 1.5rem 0;
+		font-style: italic;
+		font-size: 1.1em;
+		color: var(--color-text-secondary);
+		background: var(--color-surface);
+		border-radius: 0 6px 6px 0;
 	}
 	.hero-image {
 		margin: 0 0 2em;
