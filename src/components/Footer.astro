@@ -1,4 +1,11 @@
 ---
+import type { Lang } from '../i18n/translations';
+
+interface Props {
+	lang?: Lang;
+}
+
+const { lang = 'fr' } = Astro.props;
 const today = new Date();
 ---
 
