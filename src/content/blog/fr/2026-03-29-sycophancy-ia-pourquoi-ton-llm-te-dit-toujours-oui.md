@@ -3,6 +3,7 @@ title: "Sycophancy IA : pourquoi ton LLM te dit toujours oui"
 description: "Ton IA te flatte, valide tes mauvaises idées et change d'avis à la moindre pression. C'est la sycophancy — un défaut structurel des LLMs étudié par Stanford en 2026."
 pubDate: "2026-03-29"
 heroImage: "../../../assets/2026-03-29-sycophancy-ia-pourquoi-ton-llm-te-dit-toujours-oui.png"
+tags: ["ia", "llm", "recherche"]
 ---
 
 Tu poses une question à ton IA. Elle répond. Tu n'es pas convaincu, tu reformules en exprimant ton désaccord. Et là — miracle — elle change d'avis et te donne raison. Pas parce qu'elle avait tort au départ. Juste parce que tu as froncé les sourcils.

@@ -3,6 +3,7 @@ title: "Mars 2026 : le mois où l'IA a changé de vitesse"
 description: "12 modèles en une semaine, des agents autonomes, et Morgan Stanley qui sonne l'alarme. Ce qui vient de se passer en IA — et pourquoi ça te concerne."
 pubDate: "2026-03-26"
 audioFile: "/audio/2026-03-26-mars-2026-mois-ia-change-vitesse.mp3"
+tags: ["ia", "llm", "industrie", "openai", "google", "nvidia"]
 ---
 
 Il y a des semaines où il ne se passe rien en IA. Et il y a mars 2026.

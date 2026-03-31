@@ -3,6 +3,7 @@ title: "Jensen Huang dit qu'on a atteint l'AGI — vraiment ?"
 description: "Le CEO de Nvidia a déclaré 'je pense qu'on a atteint l'AGI' sur le podcast Lex Fridman. Une bombe rhétorique qui révèle surtout une bataille de définitions au cœur du secteur IA."
 pubDate: "2026-03-27"
 heroImage: "../../../assets/2026-03-27-jensen-huang-agi-declaration-analyse.png"
+tags: ["ia", "nvidia", "industrie"]
 ---
 
 La semaine dernière, Jensen Huang a lâché une bombe sur le podcast Lex Fridman : **"Je pense qu'on a atteint l'AGI."** En trois secondes, le CEO de Nvidia — l'entreprise dont les GPUs font littéralement tourner l'IA mondiale — venait de provoquer une déflagration dans tout le secteur.

@@ -3,6 +3,7 @@ title: "Axios hacké : anatomie d'une attaque supply chain"
 description: "Le package npm le plus populaire du web a été compromis. Un RAT déployé sur macOS, Windows et Linux en 3 heures. Ce que ça révèle sur la fragilité de npm."
 pubDate: "2026-03-31"
 heroImage: "../../../assets/2026-03-31-axios-hack-supply-chain-attack-npm.png"
+tags: ["cybersecurite", "open-source"]
 ---
 
 300 millions de téléchargements par semaine. Un seul compte npm compromis. Trois heures. C'est tout ce qu'il a fallu pour transformer **axios** — la librairie HTTP la plus utilisée de l'écosystème JavaScript — en vecteur d'attaque. Le 31 mars 2026, deux versions malveillantes ont déployé un cheval de Troie sur chaque machine qui a eu le malheur de lancer `npm install` au mauvais moment.

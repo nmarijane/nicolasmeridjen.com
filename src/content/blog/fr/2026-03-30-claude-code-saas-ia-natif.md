@@ -3,6 +3,7 @@ title: "Claude Code + SaaS : construire une app IA-native en une session"
 description: "Comment construire un SaaS complet avec Claude Code, saas-boilerplate et saas-forge. Le concept d'IA-native et de CLAUDE.md expliqué concrètement."
 pubDate: "2026-03-30"
 heroImage: "../../../assets/2026-03-30-claude-code-saas-ia-natif.png"
+tags: ["ia", "anthropic", "outils"]
 ---
 
 **66% des développeurs** qui utilisent des agents IA se heurtent au même mur : l'IA produit quelque chose d'*à peu près* juste — mais jamais complètement. Et corriger ces 20% qui clochent prend plus de temps qu'écrire le code soi-même. C'est le "80% problem", documenté dans une étude 2026 auprès de milliers de devs.

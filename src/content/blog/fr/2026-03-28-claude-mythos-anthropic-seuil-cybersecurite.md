@@ -3,6 +3,7 @@ title: "Claude Mythos : la fuite qui révèle un seuil franchi"
 description: "Anthropic a accidentellement révélé son prochain modèle, Mythos. Ce qu'on sait : c'est le plus puissant jamais entraîné, et il pose des risques de cybersécurité sans précédent."
 pubDate: "2026-03-28"
 heroImage: "../../../assets/2026-03-28-claude-mythos-anthropic-seuil-cybersecurite.png"
+tags: ["ia", "anthropic", "cybersecurite"]
 ---
 
 **Anthropic a accidentellement laissé traîner un brouillon de blog dans un bucket public.** Résultat : on sait maintenant que l'entreprise a terminé l'entraînement d'un modèle qu'elle décrit elle-même comme "de loin le plus puissant jamais développé" — et qui pose, selon ses propres mots, des risques de cybersécurité "sans précédent".

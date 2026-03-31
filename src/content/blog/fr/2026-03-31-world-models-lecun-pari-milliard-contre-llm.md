@@ -3,6 +3,7 @@ title: "World models : le pari à 1 milliard de LeCun contre les LLMs"
 description: "Yann LeCun a quitté Meta et levé 1 milliard pour AMI Labs. Ses world models promettent une IA qui comprend le monde réel. Décryptage de JEPA et de ce virage."
 pubDate: "2026-03-31"
 heroImage: "../../../assets/2026-03-31-world-models-lecun-pari-milliard-contre-llm.png"
+tags: ["ia", "llm", "recherche", "meta"]
 ---
 
 Un milliard de dollars. C'est la somme que Yann LeCun, prix Turing et ancien chef de l'IA chez Meta, vient de lever pour une startup qui n'a pas encore de produit commercial. AMI Labs, basée à Paris, promet de construire des « world models » — une forme d'intelligence artificielle radicalement différente des LLMs que tu utilises tous les jours via ChatGPT, Claude ou Gemini. Son argument : les grands modèles de langage sont des impasses pour atteindre une IA véritablement intelligente. Un pari audacieux, à contre-courant de toute l'industrie. Voici pourquoi il mérite qu'on s'y arrête.

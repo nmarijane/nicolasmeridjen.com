@@ -3,6 +3,7 @@ title: "Le code source de Claude Code a fuité — ce qu'on y trouve"
 description: "512 000 lignes de TypeScript exposées via un source map npm. Architecture, features cachées et leçons de sécurité du leak Anthropic."
 pubDate: "2026-03-31"
 heroImage: "../../../assets/2026-03-31-claude-code-source-leak-npm-anthropic.png"
+tags: ["anthropic", "open-source", "cybersecurite"]
 ---
 
 1 900 fichiers TypeScript. 512 000 lignes de code. 40 outils intégrés. 50 commandes slash. Le code source **complet** de Claude Code — l'outil de développement IA phare d'Anthropic — vient de fuiter publiquement. Pas à cause d'un hack sophistiqué. À cause d'un fichier `.map` oublié dans un package npm.
