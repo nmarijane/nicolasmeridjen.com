@@ -1,13 +1,23 @@
 ---
-import { SITE_TITLE } from '../consts';
+import { type Lang, t } from '../i18n/translations';
+import { getAlternateLang, getLangPrefix } from '../i18n/utils';
+
+interface Props {
+	lang?: Lang;
+}
+
+const { lang = 'fr' } = Astro.props;
+const altLang = getAlternateLang(lang);
+const prefix = getLangPrefix(lang);
 ---
 
 <header>
 	<nav>
-		<a href="/" class="site-title">{SITE_TITLE}</a>
+		<a href={`${prefix}/`} class="site-title">{t(lang, 'site.title')}</a>
 		<div class="nav-links">
-			<a href="/blog">Articles</a>
-			<a href="/about">A propos</a>
+			<a href={`${prefix}/`}>{t(lang, 'nav.articles')}</a>
+			<a href={`${prefix}/about/`}>{t(lang, 'nav.about')}</a>
+			<a href={`/${altLang}/`} class="lang-toggle">{altLang.toUpperCase()}</a>
 		</div>
 	</nav>
 </header>
@@ -35,6 +45,7 @@ import { SITE_TITLE } from '../consts';
 	.nav-links {
 		display: flex;
 		gap: 1.5em;
+		align-items: center;
 	}
 	.nav-links a {
 		font-family: var(--font-sans);
@@ -45,5 +56,16 @@ import { SITE_TITLE } from '../consts';
 	}
 	.nav-links a:hover {
 		color: var(--color-text);
+	}
+	.lang-toggle {
+		font-weight: 600;
+		font-size: 0.8em !important;
+		padding: 0.2em 0.5em;
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		letter-spacing: 0.03em;
+	}
+	.lang-toggle:hover {
+		border-color: var(--color-text-secondary);
 	}
 </style>
