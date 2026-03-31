@@ -2,6 +2,7 @@
 title: "Claude Mythos : la fuite qui révèle un seuil franchi"
 description: "Anthropic a accidentellement révélé son prochain modèle, Mythos. Ce qu'on sait : c'est le plus puissant jamais entraîné, et il pose des risques de cybersécurité sans précédent."
 pubDate: "2026-03-28"
+updatedDate: "2026-03-31"
 heroImage: "../../../assets/2026-03-28-claude-mythos-anthropic-seuil-cybersecurite.png"
 tags: ["ia", "anthropic", "cybersecurite"]
 ---
@@ -16,11 +17,11 @@ On n'est plus dans la course aux benchmarks. On est entrés dans quelque chose d
 
 ## Comment la fuite s'est produite
 
-Le 26 mars 2026, *Fortune* a alerté Anthropic sur un problème embarrassant : près de **3 000 assets liés au blog de l'entreprise** étaient accessibles publiquement sans authentification — des drafts d'articles, des images non publiées, des PDFs internes, et notamment un brouillon de billet annonçant un nouveau modèle.
+Le 26 mars 2026, [*Fortune*](https://fortune.com/) a alerté Anthropic sur un problème embarrassant : près de **3 000 assets liés au blog de l'entreprise** étaient accessibles publiquement sans authentification — des drafts d'articles, des images non publiées, des PDFs internes, et notamment un brouillon de billet annonçant un nouveau modèle.
 
 Le problème vient du CMS (Content Management System) utilisé par Anthropic pour publier son blog. Les assets uploadés sont **publics par défaut** dans ce système, à moins qu'un utilisateur ne les passe explicitement en privé. Anthropic aurait simplement oublié de restreindre l'accès à des dizaines de documents non destinés à être vus.
 
-Alexandre Pauwels, chercheur en cybersécurité à l'Université de Cambridge, et Roy Paz, chercheur chez LayerX Security, ont confirmé l'accessibilité de ces documents pour *Fortune*.
+Alexandre Pauwels, chercheur en cybersécurité à l'[Université de Cambridge](https://www.cam.ac.uk/), et Roy Paz, chercheur chez LayerX Security, ont confirmé l'accessibilité de ces documents pour *Fortune*.
 
 Après avoir été contactée, Anthropic a sécurisé le bucket en quelques heures. Dans un communiqué, la société a reconnu une **"erreur humaine dans la configuration du CMS"**, précisant que cela "n'implique pas les systèmes IA centraux, les données clients, ni l'infrastructure de sécurité".
 
@@ -72,15 +73,15 @@ Ce n'est pas une posture de communication. Cette logique est déjà bien établi
 
 ## Le contexte : une industrie qui navigue dans des eaux inconnues
 
-Mythos n'est pas un cas isolé. Depuis début 2026, les deux laboratoires leaders ont franchi des seuils similaires à quelques semaines d'intervalle.
+Mythos n'est pas un cas isolé. Depuis début 2026 — [un mois record pour l'IA](/fr/blog/2026-03-26-mars-2026-mois-ia-change-vitesse/) — les deux laboratoires leaders ont franchi des seuils similaires à quelques semaines d'intervalle.
 
-**OpenAI** a lancé **GPT-5.3-Codex** début février. Sam Altman l'a lui-même décrit comme **"le premier modèle à atteindre la catégorie 'high' en cybersécurité"** dans leur Preparedness Framework interne. Concrètement : OpenAI considère ce modèle suffisamment capable pour provoquer des dommages cyber réels à l'échelle, s'il était automatisé sans garde-fous.
+**[OpenAI](https://openai.com/)** a lancé **GPT-5.3-Codex** début février. Sam Altman l'a lui-même décrit comme **"le premier modèle à atteindre la catégorie 'high' en cybersécurité"** dans leur Preparedness Framework interne. Concrètement : OpenAI considère ce modèle suffisamment capable pour provoquer des dommages cyber réels à l'échelle, s'il était automatisé sans garde-fous.
 
 OpenAI a répondu en proposant **10 millions de dollars en crédits API** pour les chercheurs travaillant sur les défenses cyber, et en bloquant l'accès API non-restreint pour les usages à risque.
 
 **Anthropic**, la même semaine, avait lancé Claude **Opus 4.6** avec une capacité similaire : lors des tests internes, le modèle a identifié **plus de 500 vulnérabilités zero-day inconnues** dans des bibliothèques open-source. En autonomie. Sans qu'on lui indique comment chercher — juste en lui donnant l'objectif.
 
-Et rappelons-nous : en novembre 2025, Anthropic avait documenté et stoppé ce qu'elle décrit comme **"le premier cas documenté d'une cyberattaque à grande échelle exécutée sans intervention humaine substantielle"** — conduite par un groupe lié à l'État chinois, ayant utilisé Claude Code pour infiltrer une trentaine d'organisations (entreprises tech, institutions financières, agences gouvernementales). **80 à 90 % du travail avait été réalisé par l'IA**.
+Et rappelons-nous : en novembre 2025, Anthropic avait documenté et stoppé ce qu'elle décrit comme **"le premier cas documenté d'une cyberattaque à grande échelle exécutée sans intervention humaine substantielle"** — conduite par un groupe lié à l'État chinois, ayant utilisé [Claude Code](/fr/blog/2026-03-31-claude-code-source-leak-npm-anthropic/) pour infiltrer une trentaine d'organisations (entreprises tech, institutions financières, agences gouvernementales). **80 à 90 % du travail avait été réalisé par l'IA**.
 
 Mythos arrive dans ce contexte. Ce n'est pas l'avenir — c'est l'étape suivante d'une réalité déjà en marche.
 
@@ -92,7 +93,7 @@ Pour les **entreprises et les équipes de sécurité** : la capacité offensive 
 
 Pour les **développeurs** : les modèles comme Mythos vont être utilisés pour auditer du code à une vitesse et une profondeur impossibles manuellement. C'est une bonne nouvelle pour la qualité logicielle — et une mauvaise pour les mauvaises pratiques de sécurité "cachées sous le tapis".
 
-Pour les **régulateurs** : la sortie de Mythos va probablement alimenter le débat sur l'EU AI Act et les critères de classification des modèles "à haut risque". Un modèle que son créateur lui-même classe comme "far ahead of any other AI model in cyber capabilities" ne s'inscrit pas facilement dans les cases réglementaires existantes.
+Pour les **régulateurs** : la sortie de Mythos va probablement alimenter le débat sur l'[EU AI Act](https://artificialintelligenceact.eu/) et les critères de classification des modèles "à haut risque". Un modèle que son créateur lui-même classe comme "far ahead of any other AI model in cyber capabilities" ne s'inscrit pas facilement dans les cases réglementaires existantes.
 
 Pour **tout le monde** : l'ère où les grandes IA étaient des outils neutres — ni dangereuses ni vraiment utiles à grande échelle — est peut-être derrière nous.
 

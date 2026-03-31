@@ -2,6 +2,7 @@
 title: "Jensen Huang dit qu'on a atteint l'AGI — vraiment ?"
 description: "Le CEO de Nvidia a déclaré 'je pense qu'on a atteint l'AGI' sur le podcast Lex Fridman. Une bombe rhétorique qui révèle surtout une bataille de définitions au cœur du secteur IA."
 pubDate: "2026-03-27"
+updatedDate: "2026-03-31"
 heroImage: "../../../assets/2026-03-27-jensen-huang-agi-declaration-analyse.png"
 tags: ["ia", "nvidia", "industrie"]
 ---
@@ -14,13 +15,13 @@ Sauf que... ce n'est pas vraiment ce qu'il a dit. Ou plutôt, c'est exactement c
 
 ## Ce qui s'est passé : la déclaration et son contexte
 
-C'était le 24 mars dernier, sur le podcast de Lex Fridman. L'épisode #494 avec Jensen Huang, CEO de Nvidia. La valeur boursière de l'entreprise ? Environ 4 000 milliards de dollars. L'homme qui a transformé une startup de cartes graphiques pour gamers en moteur de la révolution IA mondiale.
+C'était le 24 mars dernier — [en plein mois record pour l'IA](/fr/blog/2026-03-26-mars-2026-mois-ia-change-vitesse/) — sur le [podcast de Lex Fridman](https://lexfridman.com/podcast/). L'épisode #494 avec Jensen Huang, CEO de Nvidia. La valeur boursière de l'entreprise ? Environ 4 000 milliards de dollars. L'homme qui a transformé une startup de cartes graphiques pour gamers en moteur de la révolution IA mondiale.
 
 Lex Fridman lui demande simplement : "Quand pensez-vous qu'on atteindra l'AGI ?" En posant la question, Fridman définit lui-même le terme : une IA capable de "faire ton boulot", c'est-à-dire créer, faire croître et gérer une startup tech valorisée à plus d'un milliard de dollars.
 
 La réponse de Jensen Huang : **"Je pense que c'est maintenant. Je pense qu'on a atteint l'AGI."**
 
-Fridman répond, amusé : "Tu vas exciter beaucoup de monde avec ça." Huang mentionne alors l'essor des agents IA autonomes, les milliers d'utilisateurs qui pilotent des assistants IA pour des tâches complexes... avant de légèrement nuancer en disant que les probabilités qu'un de ces agents construise le prochain Nvidia restent à zéro.
+Fridman répond, amusé : "Tu vas exciter beaucoup de monde avec ça." Huang mentionne alors l'essor des [agents IA autonomes](/fr/blog/2026-03-28-agents-ia-copilotes-autonomes-2026/), les milliers d'utilisateurs qui pilotent des assistants IA pour des tâches complexes... avant de légèrement nuancer en disant que les probabilités qu'un de ces agents construise le prochain Nvidia restent à zéro.
 
 Le tout s'est immédiatement retrouvé sur X, Reddit, Hacker News. Les réactions ont oscillé entre enthousiasme naïf et scepticisme acéré.
 
@@ -32,9 +33,9 @@ Le terme a été popularisé en 1997 par le chercheur Mark Gubrud, qui le défin
 
 Voici l'état du terrain aujourd'hui :
 
-- **OpenAI** (Sam Altman) a déclaré en août 2025 que l'AGI est "un terme pas vraiment utile"
-- **Anthropic** (Dario Amodei) dit publiquement qu'il "n'aime pas le terme AGI" et le considère comme "un terme marketing"
-- **Google** (Jeff Dean) dit qu'il "évite les conversations sur l'AGI"
+- **[OpenAI](https://openai.com/)** (Sam Altman) a déclaré en août 2025 que l'AGI est "un terme pas vraiment utile"
+- **[Anthropic](https://www.anthropic.com/)** (Dario Amodei) dit publiquement qu'il "n'aime pas le terme AGI" et le considère comme "un terme marketing"
+- **[Google](https://deepmind.google/)** (Jeff Dean) dit qu'il "évite les conversations sur l'AGI"
 - **Microsoft** (Satya Nadella) juge l'AGI "du benchmark hacking auto-proclamé"
 
 Les mêmes entreprises qui se battaient pour atteindre l'AGI il y a deux ans fuient désormais le terme. Pas par modestie — par intérêt stratégique. Car derrière les slogans, il y a des clauses contractuelles avec des milliards en jeu.
@@ -64,7 +65,7 @@ Mettons de côté les déclarations et regardons les faits concrets.
 - Rédiger du code fonctionnel dans des dizaines de langages, détecter ses propres bugs, proposer des refactorings
 - Synthétiser des dizaines de documents juridiques ou médicaux en quelques secondes
 - Générer des images, vidéos, musiques de qualité professionnelle
-- Piloter des agents autonomes capables d'exécuter des workflows complexes (réservation, recherche, analyse)
+- Piloter des [agents autonomes](/fr/blog/2026-03-28-agents-ia-copilotes-autonomes-2026/) capables d'exécuter des workflows complexes (réservation, recherche, analyse)
 - Résoudre des problèmes mathématiques de niveau olympiade
 - Lire et résumer des papers scientifiques, proposer des hypothèses de recherche
 
@@ -93,7 +94,7 @@ Huang le reconnaît lui-même en nuançant : "La probabilité qu'un de ces agent
 
 Si on accepte la définition pragmatique (une IA capable d'automatiser des tâches complexes qui nécessitaient avant un expert humain), alors oui, on y est. Et les implications sont déjà réelles :
 
-**Pour les développeurs :** les outils IA (Claude Code, Cursor, Copilot) transforment déjà la façon de coder. Pas de remplacement, mais une amplification massive de la productivité. Un développeur avec les bons outils IA fait le travail de deux ou trois.
+**Pour les développeurs :** les outils IA ([Claude Code](/fr/blog/2026-03-30-claude-code-saas-ia-natif/), Cursor, Copilot) transforment déjà la façon de coder. Pas de remplacement, mais une amplification massive de la productivité. Un développeur avec les bons outils IA fait le travail de deux ou trois.
 
 **Pour les entrepreneurs :** les agents IA permettent d'automatiser les workflows qui nécessitaient des prestataires ou des employés (support client, veille, rédaction, analyse de données). Une équipe de 3 personnes peut aujourd'hui opérer comme une équipe de 10.
 
@@ -109,7 +110,7 @@ Plusieurs signaux méritent attention dans les mois à venir :
 
 2. **TurboQuant (Google Research)** : un algorithme de compression vectorielle présenté à ICLR 2026 qui réduit la mémoire des LLMs d'un facteur 6x sans perte de précision. Si ce type de technique se généralise, des modèles actuellement impossibles à faire tourner sur des appareils personnels pourraient devenir accessibles.
 
-3. **OpenAI × Helion** : Sam Altman serait en "négociations avancées" pour racheter Helion, une startup de fusion nucléaire. L'IA consomme une quantité d'énergie absurde — trouver une source d'énergie quasi-illimitée serait un game-changer absolu.
+3. **OpenAI × Helion** : Sam Altman serait en "négociations avancées" pour racheter [Helion](https://www.helionenergy.com/), une startup de fusion nucléaire. L'IA consomme une quantité d'énergie absurde — trouver une source d'énergie quasi-illimitée serait un game-changer absolu.
 
 4. **La bataille juridique Anthropic** : Anthropic vient de s'opposer en justice au Pentagone qui l'a désignée comme "risque pour la chaîne d'approvisionnement militaire". L'issue de ce procès va définir jusqu'où les gouvernements peuvent contrôler les labs IA privés.
 
@@ -118,7 +119,7 @@ Plusieurs signaux méritent attention dans les mois à venir :
 **Ce qu'il faut retenir :**
 
 - **"AGI" est un terme marketing sans définition consensuelle** — quand Jensen Huang dit qu'on l'a atteint, il utilise sa propre définition, pas la définition académique
-- **L'IA actuelle est bluffante dans son domaine, mais loin d'être "générale"** — elle hallucine, ne transfère pas ses compétences, et nécessite toujours de la supervision humaine
+- **L'IA actuelle est bluffante dans son domaine, mais loin d'être "générale"** — elle hallucine, [ne te contredit presque jamais](/fr/blog/2026-03-29-sycophancy-ia-pourquoi-ton-llm-te-dit-toujours-oui/), ne transfère pas ses compétences, et nécessite toujours de la supervision humaine
 - **Les déclarations des PDGs sont des signaux stratégiques** — comprendre qui dit quoi et pourquoi est aussi important que ce qui est dit
 - **Les implications concrètes sont déjà là** — que tu sois dev, entrepreneur ou créatif, les outils IA 2026 transforment déjà les façons de travailler, AGI ou pas
 

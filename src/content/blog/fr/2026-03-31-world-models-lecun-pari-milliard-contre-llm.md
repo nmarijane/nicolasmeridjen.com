@@ -2,6 +2,7 @@
 title: "World models : le pari à 1 milliard de LeCun contre les LLMs"
 description: "Yann LeCun a quitté Meta et levé 1 milliard pour AMI Labs. Ses world models promettent une IA qui comprend le monde réel. Décryptage de JEPA et de ce virage."
 pubDate: "2026-03-31"
+updatedDate: "2026-03-31"
 heroImage: "../../../assets/2026-03-31-world-models-lecun-pari-milliard-contre-llm.png"
 tags: ["ia", "llm", "recherche", "meta"]
 ---
@@ -19,9 +20,9 @@ Pour LeCun, les LLMs — ces modèles qui prédisent le mot suivant à partir de
 > « Les LLMs sont une impasse pour atteindre l'intelligence artificielle générale. On ne peut pas comprendre le monde uniquement à partir de mots. »
 > — Yann LeCun, conférence AMI Labs, mars 2026
 
-En janvier 2026, il co-fonde AMI Labs (Advanced Machine Intelligence) avec Alexandre LeBrun, ex-CEO de Nabla et vétéran de l'IA (il avait vendu Wit.ai à Facebook en 2015). Objectif affiché : construire des IA qui apprennent **à partir du monde réel** — images, vidéos, sons — plutôt qu'à partir de textes.
+En janvier 2026, il co-fonde AMI Labs (Advanced Machine Intelligence) avec Alexandre LeBrun, ex-CEO de Nabla et vétéran de l'IA (il avait vendu [Wit.ai](https://wit.ai/) à Facebook en 2015). Objectif affiché : construire des IA qui apprennent **à partir du monde réel** — images, vidéos, sons — plutôt qu'à partir de textes.
 
-Le 9 mars 2026, TechCrunch annonce la levée : **1,03 milliard de dollars**, valorisation pré-money de **3,5 milliards**. Parmi les investisseurs : Nvidia, Samsung, Toyota Ventures, Bezos Expeditions, ainsi que Xavier Niel, le groupe Dassault et Bpifrance. Un seed round historique pour l'Europe.
+Le 9 mars 2026, [TechCrunch](https://techcrunch.com/) annonce la levée : **1,03 milliard de dollars**, valorisation pré-money de **3,5 milliards**. Parmi les investisseurs : [Nvidia](/fr/blog/2026-03-27-jensen-huang-agi-declaration-analyse/), Samsung, Toyota Ventures, Bezos Expeditions, ainsi que Xavier Niel, le groupe Dassault et Bpifrance. Un seed round historique pour l'Europe.
 
 ---
 
@@ -65,7 +66,7 @@ Le débat entre world models et LLMs n'est pas qu'académique. Il touche aux lim
 
 ### Ce que les LLMs ne savent pas faire
 
-En mars 2026, les LLMs sont plus puissants que jamais. GPT-5.4 dépasse les humains sur le benchmark OSWorld avec **75% de réussite** contre 72,4% pour les humains. Gemini 3.1 traite 2 millions de tokens en contexte. ChatGPT compte **900 millions d'utilisateurs hebdomadaires**. Les LLMs dominent.
+En [mars 2026](/fr/blog/2026-03-26-mars-2026-mois-ia-change-vitesse/), les LLMs sont plus puissants que jamais. GPT-5.4 dépasse les humains sur le benchmark OSWorld avec **75% de réussite** contre 72,4% pour les humains. Gemini 3.1 traite 2 millions de tokens en contexte. ChatGPT compte **900 millions d'utilisateurs hebdomadaires**. Les LLMs dominent.
 
 Mais ils ont des angles morts structurels :
 
@@ -95,9 +96,9 @@ Le pari de LeCun s'inscrit dans un mouvement plus large. Les world models attire
 | **World Labs** | Fei-Fei Li | 1 Md$+ | Modèles 3D, intégration Autodesk |
 | **SpAItial** | Chercheurs européens | 13 M$ (seed) | Compréhension spatiale |
 
-Quand deux prix Turing (LeCun) et une pionnière de l'IA (Fei-Fei Li, créatrice d'ImageNet) parient chacun un milliard sur les world models, ce n'est plus un signal faible. C'est un mouvement de fond.
+Quand deux prix Turing (LeCun) et une pionnière de l'IA (Fei-Fei Li, créatrice d'[ImageNet](https://www.image-net.org/)) parient chacun un milliard sur les world models, ce n'est plus un signal faible. C'est un mouvement de fond.
 
-Même les géants des LLMs s'y intéressent. La Tribune rapportait en début d'année que Meta, Google et Nvidia investissent tous dans la recherche sur les world models en parallèle de leurs travaux sur les LLMs. Pas comme remplacement — comme complément.
+Même les géants des LLMs s'y intéressent. [La Tribune](https://www.latribune.fr/) rapportait en début d'année que Meta, Google et Nvidia investissent tous dans la recherche sur les world models en parallèle de leurs travaux sur les LLMs. Pas comme remplacement — comme complément.
 
 ---
 
@@ -107,7 +108,7 @@ Les world models ne vont pas remplacer ChatGPT pour rédiger tes emails. Leur te
 
 ### Robotique et industrie
 
-C'est l'application la plus évidente. Un robot qui comprend la physique peut manipuler des objets inconnus, naviguer dans des environnements imprévus, anticiper les collisions. Toyota Ventures investit dans AMI Labs pour une raison : les voitures autonomes ont besoin de world models, pas de chatbots.
+C'est l'application la plus évidente. Un robot qui comprend la physique peut manipuler des objets inconnus, naviguer dans des environnements imprévus, anticiper les collisions — un saut qualitatif par rapport aux [agents IA actuels](/fr/blog/2026-03-28-agents-ia-copilotes-autonomes-2026/) qui restent cantonnés au numérique. Toyota Ventures investit dans AMI Labs pour une raison : les voitures autonomes ont besoin de world models, pas de chatbots.
 
 ### Santé
 

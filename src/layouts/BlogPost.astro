@@ -30,11 +30,44 @@ const {
 } = Astro.props;
 
 const articleUrl = new URL(Astro.url.pathname, Astro.site).toString();
+
+const jsonLd: Record<string, unknown> = {
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": articleUrl,
+	},
+	"headline": title,
+	"description": description,
+	"datePublished": pubDate.toISOString(),
+	"dateModified": (updatedDate ?? pubDate).toISOString(),
+	"author": {
+		"@type": "Person",
+		"name": "Nicolas Meridjen",
+		"url": "https://nicolasmeridjen.com",
+		"knowsAbout": ["Intelligence Artificielle", "SaaS", "Agents IA", "Développement Web", "Cloud Architecture"],
+		"sameAs": [
+			"https://github.com/nmarijane",
+			"https://www.linkedin.com/in/nicolasmeridjen/",
+		],
+	},
+	"publisher": {
+		"@type": "Person",
+		"name": "Nicolas Meridjen",
+		"url": "https://nicolasmeridjen.com",
+	},
+};
+
+if (heroImage) {
+	jsonLd.image = new URL(heroImage.src, Astro.site).toString();
+}
 ---
 
 <html lang={lang}>
 	<head>
 		<BaseHead title={title} description={description} image={heroImage} lang={lang} />
+		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 	</head>
 
 	<body>
@@ -79,7 +112,7 @@ const articleUrl = new URL(Astro.url.pathname, Astro.site).toString();
 
 				{heroImage && (
 					<div class="hero-image">
-						<Image width={960} height={540} src={heroImage} alt="" />
+						<Image width={960} height={540} src={heroImage} alt={title} />
 					</div>
 				)}
 

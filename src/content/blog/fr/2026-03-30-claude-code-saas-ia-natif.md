@@ -2,11 +2,12 @@
 title: "Claude Code + SaaS : construire une app IA-native en une session"
 description: "Comment construire un SaaS complet avec Claude Code, saas-boilerplate et saas-forge. Le concept d'IA-native et de CLAUDE.md expliqué concrètement."
 pubDate: "2026-03-30"
+updatedDate: "2026-03-31"
 heroImage: "../../../assets/2026-03-30-claude-code-saas-ia-natif.png"
 tags: ["ia", "anthropic", "outils"]
 ---
 
-**66% des développeurs** qui utilisent des agents IA se heurtent au même mur : l'IA produit quelque chose d'*à peu près* juste — mais jamais complètement. Et corriger ces 20% qui clochent prend plus de temps qu'écrire le code soi-même. C'est le "80% problem", documenté dans une étude 2026 auprès de milliers de devs.
+**66% des développeurs** qui utilisent des [agents IA](/fr/blog/2026-03-28-agents-ia-copilotes-autonomes-2026/) se heurtent au même mur : l'IA produit quelque chose d'*à peu près* juste — mais jamais complètement. Et corriger ces 20% qui clochent prend plus de temps qu'écrire le code soi-même. C'est le "80% problem", documenté dans une étude 2026 auprès de milliers de devs.
 
 Il existe une façon d'éviter ça. Elle n'a rien à voir avec de meilleures formulations de prompts. Elle s'appelle le **context engineering**.
 
@@ -14,13 +15,13 @@ Il existe une façon d'éviter ça. Elle n'a rien à voir avec de meilleures for
 
 ## Claude Code est #1 — mais le problème, c'est le contexte
 
-Depuis son lancement, Claude Code s'est imposé comme l'agent de code le plus populaire du marché. Il consomme 5,5x moins de tokens que Cursor pour des tâches équivalentes. Il peut lire ton codebase entier, modifier des dizaines de fichiers en parallèle, lancer des tests, corriger ses propres erreurs.
+Depuis son lancement — dans un contexte où [l'IA accélère à un rythme sans précédent](/fr/blog/2026-03-26-mars-2026-mois-ia-change-vitesse/) — Claude Code s'est imposé comme l'agent de code le plus populaire du marché. Il consomme 5,5x moins de tokens que Cursor pour des tâches équivalentes. Il peut lire ton codebase entier, modifier des dizaines de fichiers en parallèle, lancer des tests, corriger ses propres erreurs.
 
 Le problème n'est pas la puissance. C'est ce qui se passe quand Claude commence à coder sans savoir *comment* ton projet est organisé, *pourquoi* tu as fait certains choix d'architecture, *quelles conventions* tu utilises.
 
 Il improvise. Et quand il improvise sur un projet SaaS — auth, multi-tenancy, Stripe, base de données — les erreurs sont coûteuses.
 
-Martin Fowler a donné un nom à la discipline qui résout ça : le **context engineering**. Pas le prompt engineering (choisir les bons mots). L'engineering de contexte — configurer l'environnement dans lequel l'agent travaille pour qu'il produise des résultats reproductibles et prévisibles.
+[Martin Fowler](https://martinfowler.com/) a donné un nom à la discipline qui résout ça : le **context engineering**. Pas le prompt engineering (choisir les bons mots). L'engineering de contexte — configurer l'environnement dans lequel l'agent travaille pour qu'il produise des résultats reproductibles et prévisibles.
 
 Le fichier central de cette discipline ? Le `CLAUDE.md`.
 
@@ -28,7 +29,7 @@ Le fichier central de cette discipline ? Le `CLAUDE.md`.
 
 Un `CLAUDE.md` est un fichier Markdown qui vit à la racine de ton projet. Claude Code le lit automatiquement à chaque démarrage — il fait partie du system prompt avant même que tu n'écrives ta première ligne.
 
-Anthropic recommande de le traiter comme une infrastructure, pas comme de la documentation optionnelle. En 2026, c'est devenu aussi indispensable que `.gitignore` dans la communauté Claude Code.
+[Anthropic](https://docs.anthropic.com/en/docs/claude-code/overview) recommande de le traiter comme une infrastructure, pas comme de la documentation optionnelle. En 2026, c'est devenu aussi indispensable que `.gitignore` dans la communauté Claude Code.
 
 Concrètement, qu'est-ce qu'on y met ?
 
@@ -50,7 +51,7 @@ Un codebase **IA-native** ne signifie pas "codé avec de l'IA". Ça signifie qu'
 
 La différence pratique : au lieu de construire ton SaaS puis d'écrire un CLAUDE.md pour documenter ce que tu as fait, tu *pars* avec un projet où le contexte est déjà là.
 
-C'est exactement ce que fait `nmarijane/saas-boilerplate` — un boilerplate Next.js 16 open source avec 20+ fonctionnalités (auth, Stripe, RBAC, API keys, webhooks, admin, onboarding...) qui embarque nativement :
+C'est exactement ce que fait [`nmarijane/saas-boilerplate`](https://github.com/nmarijane/saas-boilerplate) — un boilerplate Next.js 16 open source avec 20+ fonctionnalités (auth, Stripe, RBAC, API keys, webhooks, admin, onboarding...) qui embarque nativement :
 
 - Un `CLAUDE.md` configuré avec l'architecture complète du projet
 - Un `docs/SETUP.md` décrivant chaque feature, chaque variable d'environnement, chaque décision technique

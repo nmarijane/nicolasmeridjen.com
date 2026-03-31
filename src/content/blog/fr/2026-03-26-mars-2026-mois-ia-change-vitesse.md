@@ -2,13 +2,14 @@
 title: "Mars 2026 : le mois où l'IA a changé de vitesse"
 description: "12 modèles en une semaine, des agents autonomes, et Morgan Stanley qui sonne l'alarme. Ce qui vient de se passer en IA — et pourquoi ça te concerne."
 pubDate: "2026-03-26"
+updatedDate: "2026-03-31"
 audioFile: "/audio/2026-03-26-mars-2026-mois-ia-change-vitesse.mp3"
 tags: ["ia", "llm", "industrie", "openai", "google", "nvidia"]
 ---
 
 Il y a des semaines où il ne se passe rien en IA. Et il y a mars 2026.
 
-En l'espace de quelques jours, OpenAI, Google, NVIDIA, Alibaba et une dizaine d'acteurs ont sorti de nouveaux modèles, de nouvelles infrastructures, et de nouvelles visions de ce que l'intelligence artificielle peut faire. Morgan Stanley a publié un rapport qui prévient : un saut technologique majeur arrive dans les prochains mois, et la plupart du monde n'est pas prêt.
+En l'espace de quelques jours, OpenAI, Google, NVIDIA, Alibaba et une dizaine d'acteurs ont sorti de nouveaux modèles, de nouvelles infrastructures, et de nouvelles visions de ce que l'intelligence artificielle peut faire. [Morgan Stanley](https://www.morganstanley.com/ideas/artificial-intelligence-outlook) a publié un rapport qui prévient : un saut technologique majeur arrive dans les prochains mois, et la plupart du monde n'est pas prêt.
 
 Voici ce qui s'est passé — et surtout, ce que ça change concrètement.
 
@@ -18,11 +19,11 @@ Voici ce qui s'est passé — et surtout, ce que ça change concrètement.
 
 Entre le 1er et le 24 mars, le rythme des sorties a été vertigineux. Quelques temps forts.
 
-**GPT-5.4** d'OpenAI est arrivé le 5 mars avec trois variantes (Standard, Thinking, Pro) et un million de tokens de contexte. Sur le benchmark GDPVal, il atteint 83% — un score au niveau d'experts humains sur des tâches à forte valeur économique. Le prix ? 2,50$ par million de tokens en entrée.
+**GPT-5.4** d'[OpenAI](https://openai.com/) est arrivé le 5 mars avec trois variantes (Standard, Thinking, Pro) et un million de tokens de contexte. Sur le benchmark GDPVal, il atteint 83% — un score au niveau d'experts humains sur des tâches à forte valeur économique. Le prix ? 2,50$ par million de tokens en entrée.
 
-**Qwen 3.5** d'Alibaba a surpris tout le monde avec des modèles allant de 0,8 à 9 milliards de paramètres, capables de tourner sur un laptop. Le modèle 9B atteint 81,7 sur GPQA Diamond — un score supérieur au modèle open-source 120B d'OpenAI. Licence Apache 2.0, quasiment gratuit.
+**Qwen 3.5** d'[Alibaba](https://qwenlm.github.io/) a surpris tout le monde avec des modèles allant de 0,8 à 9 milliards de paramètres, capables de tourner sur un laptop. Le modèle 9B atteint 81,7 sur GPQA Diamond — un score supérieur au modèle open-source 120B d'OpenAI. Licence Apache 2.0, quasiment gratuit.
 
-**Nemotron 3 Super** de NVIDIA — 120 milliards de paramètres au total mais seulement 12 milliards actifs grâce à l'architecture Mixture of Experts. Il score 60,47% sur SWE-Bench Verified (un benchmark de résolution de bugs dans du vrai code) avec un débit 2,2x supérieur à GPT-OSS-120B.
+**Nemotron 3 Super** de [NVIDIA](https://www.nvidia.com/en-us/ai/) — 120 milliards de paramètres au total mais seulement 12 milliards actifs grâce à l'architecture Mixture of Experts. Il score 60,47% sur SWE-Bench Verified (un benchmark de résolution de bugs dans du vrai code) avec un débit 2,2x supérieur à GPT-OSS-120B.
 
 Et ce n'est pas fini : Lightricks a sorti **LTX 2.3** pour la génération vidéo 4K à 50 FPS, ByteDance et l'Université de Pékin ont dévoilé **Helios** (14 milliards de paramètres, vidéos de 60 secondes), et bien d'autres.
 
@@ -34,7 +35,7 @@ Ce qui frappe, c'est que la plupart de ces modèles sont open source. L'IA de po
 
 Si les modèles sont les cerveaux, la conférence GTC de NVIDIA a montré que l'industrie travaille maintenant sur le corps.
 
-Jensen Huang a consacré une grande partie de sa keynote aux **agents IA autonomes** — des systèmes qui ne se contentent pas de répondre à des questions, mais qui agissent : ils raisonnent, planifient, exécutent des tâches complexes et interagissent avec des outils.
+[Jensen Huang](/fr/blog/2026-03-27-jensen-huang-agi-declaration-analyse/) a consacré une grande partie de sa keynote aux **[agents IA autonomes](/fr/blog/2026-03-28-agents-ia-copilotes-autonomes-2026/)** — des systèmes qui ne se contentent pas de répondre à des questions, mais qui agissent : ils raisonnent, planifient, exécutent des tâches complexes et interagissent avec des outils.
 
 L'annonce phare : **NemoClaw**, un stack open source qui s'intègre à OpenClaw (la plateforme d'agents IA que Huang a qualifiée de *"prochain ChatGPT"*). L'idée : permettre à n'importe qui de faire tourner des agents IA localement, avec des contrôles de sécurité stricts — traces d'audit, politiques de confinement, routage entre GPU local et cloud.
 
@@ -67,7 +68,7 @@ Si tu travailles dans la tech, tu as probablement déjà senti l'accélération.
 
 **Si tu es dans le business** : les agents IA changent la donne. Un agent qui peut naviguer sur le web, analyser des données, rédiger des rapports et déclencher des actions — c'est un employé virtuel. Pas parfait, mais qui s'améliore tous les mois.
 
-**Si tu gères des équipes** : une étude de Harvard Business Review publiée en mars 2026 montre que les postes routiniers et automatisables ont chuté de 13% depuis l'arrivée de ChatGPT, tandis que les postes analytiques et créatifs ont augmenté de 20%. Les travailleurs avec des compétences IA touchent des primes salariales jusqu'à 56% supérieures.
+**Si tu gères des équipes** : une étude de [Harvard Business Review](https://hbr.org/) publiée en mars 2026 montre que les postes routiniers et automatisables ont chuté de 13% depuis l'arrivée de ChatGPT, tandis que les postes analytiques et créatifs ont augmenté de 20%. Les travailleurs avec des compétences IA touchent des primes salariales jusqu'à 56% supérieures.
 
 **Si tu cherches un emploi** : bonne nouvelle, les compétences IA compensent les "désavantages" classiques. Les candidats plus âgés ou sans diplôme avancé voient leurs chances augmenter significativement quand ils affichent des compétences IA sur leur CV, surtout avec une certification reconnue.
 

@@ -2,13 +2,14 @@
 title: "Le code source de Claude Code a fuité — ce qu'on y trouve"
 description: "512 000 lignes de TypeScript exposées via un source map npm. Architecture, features cachées et leçons de sécurité du leak Anthropic."
 pubDate: "2026-03-31"
+updatedDate: "2026-03-31"
 heroImage: "../../../assets/2026-03-31-claude-code-source-leak-npm-anthropic.png"
 tags: ["anthropic", "open-source", "cybersecurite"]
 ---
 
 1 900 fichiers TypeScript. 512 000 lignes de code. 40 outils intégrés. 50 commandes slash. Le code source **complet** de Claude Code — l'outil de développement IA phare d'Anthropic — vient de fuiter publiquement. Pas à cause d'un hack sophistiqué. À cause d'un fichier `.map` oublié dans un package npm.
 
-Le 31 mars 2026, le chercheur en sécurité Chaofan Shou a découvert que le package npm de Claude Code contenait un source map pointant vers un bucket de stockage R2 avec l'intégralité du code source non obfusqué. En quelques heures, un dépôt GitHub archivant le code a dépassé les 1 100 stars et 1 900 forks.
+Le 31 mars 2026, le chercheur en sécurité Chaofan Shou a découvert que le [package npm de Claude Code](https://www.npmjs.com/package/@anthropic-ai/claude-code) contenait un source map pointant vers un bucket de stockage [Cloudflare R2](https://developers.cloudflare.com/r2/) avec l'intégralité du code source non obfusqué. En quelques heures, un dépôt GitHub archivant le code a dépassé les 1 100 stars et 1 900 forks.
 
 L'ironie est brutale : un outil conçu pour aider les développeurs à écrire du meilleur code a été trahi par une erreur de configuration de build.
 
@@ -79,7 +80,7 @@ Le choix de React pour une interface CLI est audacieux. Ça signifie que l'UI de
 
 ## Le contexte : deuxième fuite en cinq jours
 
-Ce n'est pas un incident isolé pour Anthropic. Le 26 mars — cinq jours plus tôt — une erreur de configuration CMS avait déjà exposé des détails sur le modèle non-annoncé **"Claude Mythos"** (nom de code Capybara), des brouillons d'articles de blog et environ 3 000 assets non publiés.
+Ce n'est pas un incident isolé pour Anthropic. Le 26 mars — cinq jours plus tôt — une erreur de configuration CMS avait déjà exposé des détails sur le modèle non-annoncé **["Claude Mythos"](/fr/blog/2026-03-28-claude-mythos-anthropic-seuil-cybersecurite/)** (nom de code Capybara), des brouillons d'articles de blog et environ 3 000 assets non publiés.
 
 Deux fuites majeures en cinq jours, toutes les deux causées par des erreurs de configuration. Pas des attaques sophistiquées. Des oublis humains.
 
@@ -87,7 +88,7 @@ Pour une entreprise qui construit des outils demandant un accès au filesystem, 
 
 ## La même journée qu'axios : npm en crise
 
-Le timing est saisissant. Le leak de Claude Code est tombé **le même jour** que l'attaque supply chain sur axios — le package npm le plus téléchargé du monde, compromis via un compte mainteneur hijacké qui a déployé un RAT cross-platform.
+Le timing est saisissant. Le leak de Claude Code est tombé **le même jour** que [l'attaque supply chain sur axios](/fr/blog/2026-03-31-axios-hack-supply-chain-attack-npm/) — le [package npm le plus téléchargé du monde](https://www.npmjs.com/package/axios), compromis via un compte mainteneur hijacké qui a déployé un RAT cross-platform.
 
 Deux incidents npm majeurs le même jour. L'un accidentel (Claude Code), l'autre malveillant (axios). Les deux exposent la même réalité : **l'écosystème npm est structurellement fragile**. Un fichier mal exclu, un compte mal sécurisé — et les conséquences touchent potentiellement des millions de développeurs.
 
@@ -95,7 +96,7 @@ En 2025, **454 000 packages malveillants** ont été publiés sur npm. Le projet
 
 ## Les réactions de la communauté
 
-Sur Hacker News, les réactions sont partagées :
+Sur [Hacker News](https://news.ycombinator.com/), les réactions sont partagées :
 
 Les **pragmatiques** relativisent : *"Le code source de la slot machine n'est pas pertinent pour le directeur du casino"* — ce qui compte, c'est le modèle, pas le client. Le code de Claude Code est intéressant mais ne donne pas accès à la sauce secrète d'Anthropic (les poids du modèle).
 
