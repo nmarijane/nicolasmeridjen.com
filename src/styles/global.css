@@ -21,7 +21,7 @@ body {
 	padding: 0;
 	background: var(--color-bg);
 	color: var(--color-text);
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.8;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -154,7 +154,7 @@ li {
 
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	main {
 		padding: 1.5em 1em;
