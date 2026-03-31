@@ -1,0 +1,43 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { type Lang, languages, t } from '../../i18n/translations';
+
+export function getStaticPaths() {
+	return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Lang };
+---
+
+<html lang={lang}>
+	<head>
+		<BaseHead title={t(lang, 'about.meta.title')} description={t(lang, 'about.meta.description')} lang={lang} />
+	</head>
+	<body>
+		<Header lang={lang} />
+		<main>
+			<article class="about">
+				<h1>{t(lang, 'about.title')}</h1>
+				<p>{t(lang, 'about.bio.1')}</p>
+				<p>{t(lang, 'about.bio.2')}</p>
+				<p>{t(lang, 'about.bio.3')}</p>
+				<p>
+					<a href="https://nicolasmeridjen.com">nicolasmeridjen.com</a> &middot;
+					<a href="https://github.com/nmarijane">GitHub</a>
+				</p>
+			</article>
+		</main>
+		<Footer lang={lang} />
+	</body>
+</html>
+
+<style>
+	.about {
+		padding: 3em 0;
+	}
+	.about h1 {
+		margin-bottom: 1em;
+	}
+</style>
