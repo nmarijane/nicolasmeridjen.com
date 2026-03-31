@@ -15,6 +15,9 @@ const blog = defineCollection({
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
 			audioFile: z.string().optional(),
+			tags: z.array(z.string()).default([]),
+			catchStart: z.string().optional(),
+			catchEnd: z.string().optional(),
 		}),
 });
 
