@@ -17,7 +17,7 @@ const prefix = getLangPrefix(lang);
 		<div class="nav-links">
 			<a href={`${prefix}/`}>{t(lang, 'nav.articles')}</a>
 			<a href={`${prefix}/about/`}>{t(lang, 'nav.about')}</a>
-			<a href={`/${altLang}/`} class="lang-toggle">{altLang.toUpperCase()}</a>
+			<a href={`/${altLang}/`} class="lang-toggle">{lang.toUpperCase()}</a>
 		</div>
 	</nav>
 </header>
