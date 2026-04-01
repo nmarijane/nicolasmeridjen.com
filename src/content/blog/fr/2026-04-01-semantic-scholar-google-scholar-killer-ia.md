@@ -2,16 +2,18 @@
 title: "Semantic Scholar : le Google Scholar dopé à l'IA"
 description: "214 millions de papers, résumés IA, citations influentes, API gratuite. Pourquoi Semantic Scholar est l'outil de recherche que tu devrais utiliser."
 pubDate: "2026-04-01"
-heroImage: "../../assets/2026-04-01-semantic-scholar-google-scholar-killer-ia.png"
+heroImage: "../../../assets/2026-04-01-semantic-scholar-google-scholar-killer-ia.png"
 ---
 
 214 millions de papers indexés. 2,49 milliards de citations mappées. Des résumés générés par IA pour 60 millions d'articles. Et tout ça, **gratuit**, open source, sans pub. Semantic Scholar existe depuis 2015 et pourtant, la plupart des gens continuent à chercher leurs papers sur Google Scholar comme si c'était encore 2012.
 
 C'est un peu comme utiliser AltaVista quand Google existe. On peut — mais pourquoi ?
 
+> Si le sujet de l'IA appliquée à la recherche t'intéresse, on a aussi couvert [l'IA Scientist qui publie dans Nature](/fr/2026-04-01-ia-recherche-scientifique-ai-scientist-nature) — un agent qui fait le cycle complet de recherche de manière autonome.
+
 ---
 
-## C'est quoi Semantic Scholar ?
+## Semantic Scholar : le moteur de recherche scientifique IA
 
 Semantic Scholar est un moteur de recherche académique développé par **Ai2** (Allen Institute for AI), l'institut de recherche fondé par Paul Allen, cofondateur de Microsoft. L'idée : appliquer l'IA au problème de la surcharge informationnelle scientifique.
 
@@ -19,7 +21,7 @@ Parce que le problème est réel. Chaque année, il se publie plus de **3 millio
 
 Google Scholar résout une partie du problème : il te trouve des papers. Mais il te laisse seul face à une liste de résultats bruts. Semantic Scholar va plus loin : il **comprend** les papers, extrait du sens, identifie des connexions, et te présente le tout de manière exploitable.
 
-## Les fonctionnalités qui changent la donne
+## Les fonctionnalités IA qui changent la recherche académique
 
 ### 1. TLDR — des résumés IA en une phrase
 
@@ -66,7 +68,7 @@ C'est peut-être l'aspect le plus sous-estimé. L'**Academic Graph API** de Sema
 - Rate limit : 1 000 requêtes/seconde sans clé, plus avec authentification
 - Données mises à jour mensuellement
 
-Des outils entiers sont construits dessus : **Connected Papers** (visualisation de graphes de papers), **Litmaps** (cartographie de littérature), **Sourcely** (références académiques pour étudiants). Si tu développes un outil lié à la recherche scientifique, c'est la source de données la plus complète et la plus accessible qui existe.
+Des outils entiers sont construits dessus : **Connected Papers** (visualisation de graphes de papers), **Litmaps** (cartographie de littérature), **Sourcely** (références académiques pour étudiants). Si tu développes un outil lié à la recherche scientifique, c'est la source de données la plus complète et la plus accessible qui existe. D'ailleurs, si tu veux comprendre comment les [agents IA autonomes](/fr/2026-03-28-agents-ia-copilotes-autonomes-2026) pourraient exploiter ce type d'API pour automatiser la veille scientifique, on en a parlé récemment.
 
 ## Semantic Scholar vs Google Scholar : le comparatif
 
@@ -107,7 +109,7 @@ Pour de la veille techno et scientifique structurée. Quand tu construis un prod
 
 Même sans background académique, Semantic Scholar est un excellent point d'entrée. Les TLDR rendent les papers accessibles. Tu peux explorer un sujet (RAG, agents IA, fine-tuning) et comprendre rapidement l'état de la recherche sans te perdre dans le jargon.
 
-## Ce que ça dit sur l'avenir de la recherche scientifique
+## L'IA au service de la recherche scientifique : un modèle non-profit
 
 Semantic Scholar est un produit d'Ai2, un institut **non-profit**. Pas de pub. Pas de tracking. Pas de paywall. C'est un choix philosophique fort dans un monde où l'accès à la connaissance scientifique est encore largement verrouillé derrière des abonnements à 30 000 €/an.
 
@@ -115,7 +117,7 @@ L'existence de Semantic Scholar pose une question inconfortable : **pourquoi Goo
 
 Google Scholar n'a pratiquement pas changé en 15 ans. Même interface. Même fonctionnalités. Pas d'API officielle. Pas de résumés IA. Pas de recommandations personnalisées. C'est un produit en maintenance minimale — utile, mais stagnant.
 
-Pendant ce temps, un institut de recherche avec une fraction des ressources de Google a construit un outil plus intelligent, plus ouvert, et plus utile pour les chercheurs. C'est un cas d'école de ce qui arrive quand l'innovation est guidée par la mission plutôt que par la monétisation.
+Pendant ce temps, un institut de recherche avec une fraction des ressources de Google a construit un outil plus intelligent, plus ouvert, et plus utile pour les chercheurs. C'est un cas d'école de ce qui arrive quand l'innovation est guidée par la mission plutôt que par la monétisation. Un peu comme le débat actuel autour des [world models de Yann LeCun](/fr/2026-03-31-world-models-lecun-pari-milliard-contre-llm) : les meilleures avancées viennent souvent de la recherche ouverte, pas des labs fermés.
 
 ## Comment démarrer en 5 minutes
 
