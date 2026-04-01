@@ -2,7 +2,7 @@
 title: "IA et recherche scientifique : AI Scientist publie dans Nature"
 description: "Sakana AI a créé AI Scientist, un agent IA qui fait le cycle complet de recherche et publie dans Nature. Décryptage des scaling laws et du débat éthique."
 pubDate: "2026-04-01"
-heroImage: "../../assets/2026-04-01-ia-recherche-scientifique-ai-scientist-nature.png"
+heroImage: "../../../assets/2026-04-01-ia-recherche-scientifique-ai-scientist-nature.png"
 audioFile: "/audio/2026-04-01-ia-recherche-scientifique-ai-scientist-nature.mp3"
 ---
 
