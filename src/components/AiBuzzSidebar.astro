@@ -1,4 +1,5 @@
 ---
+import fs from 'node:fs';
 import { t, type Lang } from '../i18n/translations';
 
 interface Props {
@@ -25,8 +26,10 @@ const { lang } = Astro.props;
 
 let buzzData: BuzzData | null = null;
 try {
-  const raw = await import('../data/ai-buzz.json');
-  buzzData = raw.default as BuzzData;
+  const buzzPath = new URL('../data/ai-buzz.json', import.meta.url);
+  if (fs.existsSync(buzzPath)) {
+    buzzData = JSON.parse(fs.readFileSync(buzzPath, 'utf-8')) as BuzzData;
+  }
 } catch {
   buzzData = null;
 }
