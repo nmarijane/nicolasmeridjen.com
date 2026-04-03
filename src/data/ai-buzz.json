@@ -1,0 +1,44 @@
+{
+  "date": "2026-04-03",
+  "models": [
+    {
+      "name": "Claude Opus 4.6",
+      "mentions": 142,
+      "sources": [
+        { "label": "@karpathy", "url": "https://x.com/karpathy/status/example1" },
+        { "label": "TechCrunch", "url": "https://techcrunch.com/example1" },
+        { "label": "r/MachineLearning", "url": "https://reddit.com/r/MachineLearning/example1" }
+      ]
+    },
+    {
+      "name": "GPT-5",
+      "mentions": 98,
+      "sources": [
+        { "label": "@sama", "url": "https://x.com/sama/status/example2" },
+        { "label": "r/LocalLLaMA", "url": "https://reddit.com/r/LocalLLaMA/example2" }
+      ]
+    },
+    {
+      "name": "Gemini 2.5 Pro",
+      "mentions": 61,
+      "sources": [
+        { "label": "@JeffDean", "url": "https://x.com/JeffDean/status/example3" },
+        { "label": "The Verge", "url": "https://theverge.com/example3" }
+      ]
+    },
+    {
+      "name": "Llama 4",
+      "mentions": 34,
+      "sources": [
+        { "label": "Hacker News", "url": "https://news.ycombinator.com/item?id=example4" }
+      ]
+    },
+    {
+      "name": "Mistral Large 3",
+      "mentions": 12,
+      "sources": [
+        { "label": "@arthurmensch", "url": "https://x.com/arthurmensch/status/example5" }
+      ]
+    }
+  ]
+}
