@@ -60,8 +60,8 @@ const maxMentions = models[0]?.mentions ?? 1;
         const barColorDark = `rgb(${Math.round(r * 0.7)}, ${Math.round(g * 0.7)}, ${Math.round(b * 0.7)})`;
         const shownSources = model.sources.slice(0, MAX_SOURCES_SHOWN);
         const remainingCount = model.sources.length > MAX_SOURCES_SHOWN
-          ? model.mentions - shownSources.length
-          : model.mentions - model.sources.length;
+          ? model.sources.length - MAX_SOURCES_SHOWN
+          : 0;
 
         return (
           <div class="buzz-model">
