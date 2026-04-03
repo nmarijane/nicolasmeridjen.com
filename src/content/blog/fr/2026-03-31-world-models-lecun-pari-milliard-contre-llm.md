@@ -2,7 +2,7 @@
 title: "World models : le pari à 1 milliard de LeCun contre les LLMs"
 description: "Yann LeCun a quitté Meta et levé 1 milliard pour AMI Labs. Ses world models promettent une IA qui comprend le monde réel. Décryptage de JEPA et de ce virage."
 pubDate: "2026-03-31"
-heroImage: "../../assets/2026-03-31-world-models-lecun-pari-milliard-contre-llm.png"
+heroImage: "../../../assets/2026-03-31-world-models-lecun-pari-milliard-contre-llm.png"
 audioFile: "/audio/2026-03-31-world-models-lecun-pari-milliard-contre-llm.mp3"
 ---
 
