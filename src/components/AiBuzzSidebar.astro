@@ -1,0 +1,195 @@
+---
+import { t, type Lang } from '../i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+
+interface Source {
+  label: string;
+  url: string;
+}
+
+interface Model {
+  name: string;
+  mentions: number;
+  sources: Source[];
+}
+
+interface BuzzData {
+  date: string;
+  models: Model[];
+}
+
+const { lang } = Astro.props;
+
+let buzzData: BuzzData | null = null;
+try {
+  const raw = await import('../data/ai-buzz.json');
+  buzzData = raw.default as BuzzData;
+} catch {
+  buzzData = null;
+}
+
+const MAX_MODELS = 8;
+const MAX_SOURCES_SHOWN = 3;
+
+const models = buzzData?.models?.slice(0, MAX_MODELS) ?? [];
+const maxMentions = models[0]?.mentions ?? 1;
+---
+
+{models.length > 0 && (
+  <aside class="buzz-sidebar">
+    <div class="buzz-header">
+      <span class="buzz-title">{t(lang, 'buzz.title')}</span>
+      {buzzData?.date && (
+        <span class="buzz-date">{buzzData.date}</span>
+      )}
+    </div>
+    <div class="buzz-divider"></div>
+
+    <div class="buzz-list">
+      {models.map((model, i) => {
+        const ratio = model.mentions / maxMentions;
+        const widthPct = Math.max(ratio * 100, 4);
+        // Interpolate green: dark (#1a8917) for top → light (#c8ecc7) for bottom
+        const r = Math.round(26 + (200 - 26) * (1 - ratio));
+        const g = Math.round(137 + (236 - 137) * (1 - ratio));
+        const b = Math.round(23 + (199 - 23) * (1 - ratio));
+        const barColor = `rgb(${r}, ${g}, ${b})`;
+        const barColorDark = `rgb(${Math.round(r * 0.7)}, ${Math.round(g * 0.7)}, ${Math.round(b * 0.7)})`;
+        const shownSources = model.sources.slice(0, MAX_SOURCES_SHOWN);
+        const remainingCount = model.sources.length > MAX_SOURCES_SHOWN
+          ? model.mentions - shownSources.length
+          : model.mentions - model.sources.length;
+
+        return (
+          <div class="buzz-model">
+            <div class="buzz-model-header">
+              <span class="buzz-model-name">{model.name}</span>
+              <span class="buzz-model-count" style={`color: ${barColor}`}>
+                {model.mentions} mentions
+              </span>
+            </div>
+            <div class="buzz-bar-track">
+              <div
+                class="buzz-bar-fill"
+                style={`width: ${widthPct}%; background: linear-gradient(90deg, ${barColor}, ${barColorDark})`}
+              ></div>
+            </div>
+            {shownSources.length > 0 && (
+              <div class="buzz-sources">
+                {shownSources.map((source) => (
+                  <a href={source.url} target="_blank" rel="noopener noreferrer" class="buzz-source-tag">
+                    {source.label}
+                  </a>
+                ))}
+                {remainingCount > 0 && (
+                  <span class="buzz-source-more">+{remainingCount}</span>
+                )}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  </aside>
+)}
+
+<style>
+  .buzz-sidebar {
+    padding: 1.5em;
+    background: var(--color-surface);
+    border-radius: 8px;
+    position: sticky;
+    top: 2em;
+  }
+  .buzz-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .buzz-title {
+    font-family: var(--font-sans);
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-secondary);
+  }
+  .buzz-date {
+    font-family: var(--font-sans);
+    font-size: 0.65em;
+    color: #aaa;
+  }
+  .buzz-divider {
+    height: 1px;
+    background: var(--color-border);
+    margin: 0.6em 0 1em;
+  }
+  .buzz-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .buzz-model-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.3em;
+  }
+  .buzz-model-name {
+    font-family: var(--font-sans);
+    font-size: 0.85em;
+    font-weight: 600;
+    color: var(--color-text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 60%;
+  }
+  .buzz-model-count {
+    font-family: var(--font-sans);
+    font-size: 0.7em;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .buzz-bar-track {
+    height: 8px;
+    background: var(--color-border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.4em;
+  }
+  .buzz-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+  }
+  .buzz-sources {
+    display: flex;
+    gap: 0.4em;
+    flex-wrap: wrap;
+  }
+  .buzz-source-tag {
+    font-family: var(--font-sans);
+    font-size: 0.65em;
+    color: var(--color-accent);
+    text-decoration: none;
+    background: #e8f5e8;
+    padding: 0.15em 0.5em;
+    border-radius: 3px;
+    transition: background 0.15s;
+  }
+  .buzz-source-tag:hover {
+    background: #d0eed0;
+  }
+  .buzz-source-more {
+    font-family: var(--font-sans);
+    font-size: 0.65em;
+    color: var(--color-text-secondary);
+    background: #f0f0f0;
+    padding: 0.15em 0.5em;
+    border-radius: 3px;
+  }
+</style>
